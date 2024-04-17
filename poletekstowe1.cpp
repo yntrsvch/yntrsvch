@@ -6,7 +6,7 @@ const int WIDTH = 20; // Szerokość pola tekstowego
 const int HEIGHT = 1; // Wysokość pola tekstowego (wiersze)
 const int MAX_INPUT_LENGTH = WIDTH - 1; // Maksymalna długość wprowadzanego tekstu
 
-// ustawia pozycję kursora w konsoli
+// pozycję kursora w konsoli
 void setCursorPosition(int x, int y) {
     COORD coord;
     coord.X = x;
@@ -14,12 +14,12 @@ void setCursorPosition(int x, int y) {
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-// ustawia kolor tekstu w konsoli
+// kolor tekstu w konsoli
 void setConsoleColor(WORD color) {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }
 
-// rysuje pole tekstowe na ekranie konsoli
+// rysowania pola tekstowego na ekranie konsoli
 void drawTextField(int x, int y) {
     setCursorPosition(x, y);
     for (int i = 0; i < WIDTH; ++i) {
@@ -79,7 +79,7 @@ void handleInput(int x, int y) {
 }
 
 int main() {
-    // narysuj pole tekstowe na ekranie
+    // rysuj pole tekstowe na ekranie
     drawTextField(10, 5);
 
     // obsłuż wprowadzanie tekstu przez użytkownika
